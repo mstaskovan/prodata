@@ -1,25 +1,53 @@
 <!DOCTYPE html>
-<nav class="w-full bg-white shadow-lg sticky top-0 z-50">
-    
-    <div class="w-full flex justify-between h-20 items-center px-6 sm:px-12 lg:px-16">
+<nav class="w-full bg-white shadow-md sticky top-0 z-50">
+    <div class="w-full flex justify-between h-20 items-center px-0">
         
-        <div class="flex-shrink-0 flex items-center">
-            <a href="#domov">
-                <img class="h-10 w-auto" src="img/logo.jpg" alt="PRODATA logo">
+        <div class="flex items-center pl-0">
+            <a href="#domov" class="block">
+                <img class="h-12 w-auto block" src="img/logo.jpg" alt="PRODATA logo">
             </a>
         </div>
         
-        <div class="hidden md:block">
-            <div class="flex items-baseline space-x-8">
-                <a href="#domov" class="hover:text-blue-600 px-3 py-2 font-medium">Domov</a>
-                <a href="#riesenia" class="hover:text-blue-600 px-3 py-2 font-medium">Riešenia</a>
-                <a href="#podpora" class="hover:text-blue-600 px-3 py-2 font-medium">Podpora</a>
+        <div class="hidden lg:block pr-0">
+            <div class="flex items-center space-x-8 pr-4">
+                <a href="#domov" class="hover:text-blue-600 font-medium">Domov</a>
+                <a href="#riesenia" class="hover:text-blue-600 font-medium">Riešenia</a>
+                <a href="#podpora" class="hover:text-blue-600 font-medium">Podpora</a>
                 <a href="#kontakt" class="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition">Kontakt</a>
             </div>
         </div>
 
+        <div class="lg:hidden flex items-center pr-4">
+            <button id="menu-btn" class="text-gray-700 hover:text-blue-600 focus:outline-none text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 px-4 py-4 space-y-3 shadow-inner">
+        <a href="#domov" class="block hover:text-blue-600 font-medium py-2">Domov</a>
+        <a href="#riesenia" class="block hover:text-blue-600 font-medium py-2">Riešenia</a>
+        <a href="#podpora" class="block hover:text-blue-600 font-medium py-2">Podpora</a>
+        <a href="#kontakt" class="block bg-blue-600 text-white text-center px-5 py-2 rounded-lg hover:bg-blue-700 transition">Kontakt</a>
     </div>
 </nav>
+
+<script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    // Automaticky skryť menu po kliknutí na položku (aby nezavadzalo po preskrolovaní)
+    const menuLinks = mobileMenu.querySelectorAll('a');
+    menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+    });
+</script>
 
     <section id="domov" class="gradient-bg text-white py-20 px-4">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center">
