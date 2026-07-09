@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="sk" class="scroll-smooth">
+<html lang="sk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PRODATA | Komplexné IT riešenia</title>
     
-    <!-- Načítanie Tailwind v4 -->
-    <link rel="stylesheet" href="https://unpkg.com/@tailwindcss/browser@4">
+    <!-- ČISTÉ CSS BEZ JAVASCRIPTU: Tento odkaz adblocky a štíty nikdy nezablokujú -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     
     <!-- Google Fonts & FontAwesome -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,120 +15,120 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #fafafa; }
+        .gradient-bg { background: linear-gradient(to right, #2563eb, #4f46e5); }
     </style>
 </head>
-<body class="bg-[#fafafa] text-slate-900 antialiased selection:bg-blue-500 selection:text-white">
+<body class="text-gray-900 antialiased">
 
-    <!-- NAVIGÁCIA (Teraz ide na plnú šírku ako Asseco, logo posunuté úplne vľavo) -->
-    <nav class="sticky top-0 z-50 w-full border-b border-slate-100 bg-white/80 backdrop-blur-md">
+    <!-- NAVIGÁCIA (Šírka 100%, logo úplne vľavo s miernym odstupom ako Asseco) -->
+    <nav class="sticky top-0 z-50 w-full border-b border-gray-100 bg-white shadow-sm">
         <div class="w-full flex h-20 items-center justify-between px-6 lg:px-12">
             
-            <!-- Logo - na úplnom ľavom okraji obrazovky -->
+            <!-- Logo - presne na ľavej hrane -->
             <div class="flex items-center">
-                <a href="#domov" class="transition hover:opacity-90">
-                    <img class="h-10 w-auto" src="img/logo.jpg" alt="PRODATA">
+                <a href="#domov" class="transition opacity-100 hover:opacity-80">
+                    <img class="h-10 w-auto" src="img/logo.jpg" alt="PRODATA" style="max-height: 40px;">
                 </a>
             </div>
             
-            <!-- Desktop menu - na pravom okraji obrazovky -->
-            <div class="hidden md:flex items-center gap-8">
-                <a href="#domov" class="text-sm font-semibold text-slate-600 hover:text-blue-600 transition">Domov</a>
-                <a href="#riesenia" class="text-sm font-semibold text-slate-600 hover:text-blue-600 transition">Riešenia</a>
-                <a href="#podpora" class="text-sm font-semibold text-slate-600 hover:text-blue-600 transition">Podpora</a>
+            <!-- Desktop menu -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#domov" class="text-sm font-semibold text-gray-600 hover:text-blue-600 transition">Domov</a>
+                <a href="#riesenia" class="text-sm font-semibold text-gray-600 hover:text-blue-600 transition">Riešenia</a>
+                <a href="#podpora" class="text-sm font-semibold text-gray-600 hover:text-blue-600 transition">Podpora</a>
                 <a href="#contact" class="inline-flex items-center justify-center rounded-xl bg-blue-600 px-5 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-blue-700 transition">Kontakt</a>
             </div>
 
             <!-- Mobilné menu tlačidlo -->
             <div class="flex md:hidden">
-                <button id="menu-btn" class="inline-flex items-center justify-center rounded-lg p-2 text-slate-700 hover:bg-slate-100 transition">
+                <button id="menu-btn" class="inline-flex items-center justify-center rounded-lg p-2 text-gray-700 hover:bg-gray-100 transition focus:outline-none">
                     <i class="fas fa-bars text-xl"></i>
                 </button>
             </div>
         </div>
 
         <!-- Rozbaľovacie menu pre mobily -->
-        <div id="mobile-menu" class="hidden border-b border-slate-100 bg-white px-6 py-4 space-y-2 md:hidden">
-            <a href="#domov" class="block rounded-lg px-3 py-2 text-base font-semibold text-slate-700 hover:bg-slate-50">Domov</a>
-            <a href="#riesenia" class="block rounded-lg px-3 py-2 text-base font-semibold text-slate-700 hover:bg-slate-50">Riešenia</a>
-            <a href="#podpora" class="block rounded-lg px-3 py-2 text-base font-semibold text-slate-700 hover:bg-slate-50">Podpora</a>
+        <div id="mobile-menu" class="hidden border-b border-gray-100 bg-white px-6 py-4 space-y-2 md:hidden">
+            <a href="#domov" class="block rounded-lg px-3 py-2 text-base font-semibold text-gray-700 hover:bg-gray-50">Domov</a>
+            <a href="#riesenia" class="block rounded-lg px-3 py-2 text-base font-semibold text-gray-700 hover:bg-gray-50">Riešenia</a>
+            <a href="#podpora" class="block rounded-lg px-3 py-2 text-base font-semibold text-gray-700 hover:bg-gray-50">Podpora</a>
             <a href="#contact" class="block rounded-lg bg-blue-600 px-3 py-3 text-center text-base font-bold text-white shadow-sm hover:bg-blue-700">Kontakt</a>
         </div>
     </nav>
 
-    <!-- HERO SEKCIA (Modrý pás aj text idú od úplného ľavého okraja) -->
-    <section id="domov" class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-20">
+    <!-- HERO SEKCIA (Modrý pás cez celú obrazovku, text lícuje s logom hore) -->
+    <section id="domov" class="w-full gradient-bg text-white py-20">
         <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center px-6 lg:px-12">
             
-            <!-- Text začína presne na tej istej úrovni ako logo hore -->
             <div class="max-w-xl text-left">
-                <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl leading-[1.15]">
+                <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl" style="line-height: 1.15;">
                     Technológie pre moderný biznis
                 </h1>
-                <p class="mt-6 text-lg leading-8 text-blue-100/90">
-                    Sme váš stabilný partner pre hotelové, reštauračné a podnikové sys-témy. Od certifikovanej eKasy až po komplexný ERP HELIOS.
+                <p class="mt-6 text-lg leading-8 text-blue-100">
+                    Sme váš stabilný partner pre hotelové, reštauračné a podnikové systémy. Od certifikovanej eKasy až po komplexný ERP HELIOS.
                 </p>
-                <div class="mt-10 flex items-center gap-x-4">
-                    <a href="#riesenia" class="rounded-xl bg-white px-6 py-3.5 text-sm font-bold text-blue-600 shadow-md hover:bg-blue-50 transition">Naše riešenia</a>
-                    <a href="#podpora" class="rounded-xl border border-white/30 bg-white/10 px-6 py-3.5 text-sm font-bold text-white shadow-sm hover:bg-white/20 transition">Vzdialená pomoc</a>
+                <div class="mt-10 flex space-x-4">
+                    <a href="#riesenia" class="rounded-xl bg-white px-6 py-3.5 text-sm font-bold text-blue-600 shadow-md hover:bg-gray-50 transition">Naše riešenia</a>
+                    <a href="#podpora" class="rounded-xl border border-white px-6 py-3.5 text-sm font-bold text-white shadow-sm hover:bg-white hover:text-blue-600 transition">Vzdialená pomoc</a>
                 </div>
             </div>
             
             <div class="hidden md:flex justify-end pr-6">
-                <i class="fas fa-laptop-code text-[14rem] text-white/15"></i>
+                <i class="fas fa-laptop-code text-9xl opacity-20" style="font-size: 14rem;"></i>
             </div>
             
         </div>
     </section>
 
-    <!-- RIEŠENIA (Obsah nižšie zostáva vycentrovaný v peknom boxe, aby sa nerozťahoval na širokých monitoroch) -->
+    <!-- RIEŠENIA (Stredový box, aby sa karty nerozťahovali na obrovské monitory) -->
     <section id="riesenia" class="py-24 mx-auto max-w-7xl px-6 lg:px-8">
         <div class="text-center mb-16">
-            <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Čo ponúkame</h2>
-            <p class="mt-2 text-lg text-slate-600">Zabezpečíme pre váš biznis hardvér aj softvér na kľúč.</p>
+            <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Čo ponúkame</h2>
+            <p class="mt-2 text-lg text-gray-600">Zabezpečíme pre váš biznis hardvér aj softvér na kľúč.</p>
         </div>
 
         <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             
             <!-- Karta 1 -->
-            <div class="group relative flex flex-col justify-between rounded-2xl border border-slate-100 bg-white p-8 shadow-sm transition hover:shadow-md">
+            <div class="flex flex-col justify-between rounded-2xl border border-gray-100 bg-white p-8 shadow-sm hover:shadow-md transition">
                 <div>
                     <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
                         <i class="fas fa-hotel text-xl"></i>
                     </div>
-                    <h3 class="mt-6 text-xl font-bold text-slate-900">HOREC & BLUEGASTRO</h3>
-                    <p class="mt-3 text-sm leading-6 text-slate-600">Komplexné riešenia pre hotely a reštaurácie. Od online rezervácií až po detailné skladové hospodárstvo.</p>
+                    <h3 class="mt-6 text-xl font-bold text-gray-900">HOREC & BLUEGASTRO</h3>
+                    <p class="mt-3 text-sm text-gray-600 leading-6">Komplexné riešenia pre hotely a reštaurácie. Od online rezervácií až po detailné skladové hospodárstvo.</p>
                 </div>
-                <div class="mt-6 border-t border-slate-50 pt-4">
-                    <a href="#" class="text-sm font-semibold text-blue-600 group-hover:text-blue-700">Zistiť viac <span class="transition-transform group-hover:translate-x-1 inline-block">→</span></a>
+                <div class="mt-6 border-t border-gray-50 pt-4">
+                    <a href="#" class="text-sm font-semibold text-blue-600 hover:text-blue-700">Zistiť viac →</a>
                 </div>
             </div>
 
             <!-- Karta 2 -->
-            <div class="group relative flex flex-col justify-between rounded-2xl border border-slate-100 bg-white p-8 shadow-sm transition hover:shadow-md">
+            <div class="flex flex-col justify-between rounded-2xl border border-gray-100 bg-white p-8 shadow-sm hover:shadow-md transition">
                 <div>
-                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600">
+                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-green-50 text-green-600">
                         <i class="fas fa-chart-line text-xl"></i>
                     </div>
-                    <h3 class="mt-6 text-xl font-bold text-slate-900">HELIOS iNuvio</h3>
-                    <p class="mt-3 text-sm leading-6 text-slate-600">Moderný ERP systém pre stredné a veľké firmy. Majte svoje firemné procesy, financie a dáta pod úplnou kontrolou.</p>
+                    <h3 class="mt-6 text-xl font-bold text-gray-900">HELIOS iNuvio</h3>
+                    <p class="mt-3 text-sm text-gray-600 leading-6">Moderný ERP systém pre stredné a veľké firmy. Majte svoje firemné procesy, financie a dáta pod úplnou kontrolou.</p>
                 </div>
-                <div class="mt-6 border-t border-slate-50 pt-4">
-                    <a href="#" class="text-sm font-semibold text-blue-600 group-hover:text-blue-700">Zistiť viac <span class="transition-transform group-hover:translate-x-1 inline-block">→</span></a>
+                <div class="mt-6 border-t border-gray-50 pt-4">
+                    <a href="#" class="text-sm font-semibold text-blue-600 hover:text-blue-700">Zistiť viac →</a>
                 </div>
             </div>
 
             <!-- Karta 3 -->
-            <div class="group relative flex flex-col justify-between rounded-2xl border border-slate-100 bg-white p-8 shadow-sm transition hover:shadow-md">
+            <div class="flex flex-col justify-between rounded-2xl border border-gray-100 bg-white p-8 shadow-sm hover:shadow-md transition">
                 <div>
                     <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-orange-50 text-orange-600">
                         <i class="fas fa-cash-register text-xl"></i>
                     </div>
-                    <h3 class="mt-6 text-xl font-bold text-slate-900">Hardware & eKasa</h3>
-                    <p class="mt-3 text-sm leading-6 text-slate-600">Spoľahlivá dodávka a odborný servis registračných pokladníc, PC techniky, serverov a sieťových riešení.</p>
+                    <h3 class="mt-6 text-xl font-bold text-gray-900">Hardware & eKasa</h3>
+                    <p class="mt-3 text-sm text-gray-600 leading-6">Spoľahlivá dodávka a odborný servis registračných pokladníc, PC techniky, serverov a sieťových riešení.</p>
                 </div>
-                <div class="mt-6 border-t border-slate-50 pt-4">
-                    <a href="#" class="text-sm font-semibold text-blue-600 group-hover:text-blue-700">Zistiť viac <span class="transition-transform group-hover:translate-x-1 inline-block">→</span></a>
+                <div class="mt-6 border-t border-gray-50 pt-4">
+                    <a href="#" class="text-sm font-semibold text-blue-600 hover:text-blue-700">Zistiť viac →</a>
                 </div>
             </div>
 
@@ -137,52 +137,52 @@
 
     <!-- PODPORA -->
     <section id="podpora" class="mx-auto max-w-7xl px-6 lg:px-8 py-6">
-        <div class="relative isolate overflow-hidden bg-slate-950 px-6 py-16 text-center shadow-xl rounded-3xl sm:px-16">
+        <div class="relative bg-gray-900 px-6 py-16 text-center shadow-xl rounded-3xl sm:px-16">
             <h2 class="mx-auto max-w-2xl text-3xl font-bold tracking-tight text-white sm:text-4xl">Potrebujete rýchlu pomoc?</h2>
-            <p class="mx-auto mt-4 max-w-xl text-lg leading-8 text-slate-400">Náš tím technickej podpory je pripravený operatívne vyriešiť vaše problémy bezpečne na diaľku.</p>
-            <div class="mt-10 flex items-center justify-center gap-x-6">
-                <a href="https://download.teamviewer.com/download/TeamViewerQS.exe" class="rounded-xl bg-white px-5 py-3 text-base font-bold text-slate-900 shadow-sm hover:bg-slate-100 transition inline-flex items-center gap-2">
-                    <i class="fas fa-headset text-blue-600"></i> Stiahnuť TeamViewer
+            <p class="mx-auto mt-4 max-w-xl text-lg text-gray-400">Náš tím technickej podpory je pripravený operatívne vyriešiť vaše problémy bezpečne na diaľku.</p>
+            <div class="mt-10 flex items-center justify-center">
+                <a href="https://download.teamviewer.com/download/TeamViewerQS.exe" class="rounded-xl bg-white px-5 py-3 text-base font-bold text-gray-900 shadow-sm hover:bg-gray-100 transition inline-flex items-center">
+                    <i class="fas fa-headset text-blue-600 mr-2"></i> Stiahnuť TeamViewer
                 </a>
             </div>
         </div>
     </section>
 
     <!-- KONTAKT -->
-    <section id="contact" class="py-24 max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24">
+    <section id="contact" class="py-24 max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12">
         <div class="flex flex-col justify-center">
-            <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Kontaktujte nás</h2>
-            <p class="mt-4 text-lg text-slate-600 mb-8">Máte otázky ohľadom implementácie alebo záujem o nezáväznú ukážku našich produktov? Sme tu pre vás.</p>
+            <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Kontaktujte nás</h2>
+            <p class="mt-4 text-lg text-gray-600 mb-8">Máte otázky ohľadom implementácie alebo záujem o nezáväznú ukážku našich produktov? Sme tu pre vás.</p>
             
             <div class="space-y-6">
-                <div class="flex items-center gap-4">
+                <div class="flex items-center space-x-4">
                     <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-50 text-blue-600"><i class="fas fa-map-marker-alt"></i></div>
-                    <span class="font-medium text-slate-700">Púchov, Slovenská republika</span>
+                    <span class="font-medium text-gray-700">Púchov, Slovenská republika</span>
                 </div>
-                <div class="flex items-center gap-4">
+                <div class="flex items-center space-x-4">
                     <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-50 text-blue-600"><i class="fas fa-phone"></i></div>
-                    <span class="font-medium text-slate-700">+421 123 456 789</span>
+                    <span class="font-medium text-gray-700">+421 123 456 789</span>
                 </div>
-                <div class="flex items-center gap-4">
+                <div class="flex items-center space-x-4">
                     <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-50 text-blue-600"><i class="fas fa-envelope"></i></div>
-                    <span class="font-medium text-slate-700">prodata@prodata.sk</span>
+                    <span class="font-medium text-gray-700">prodata@prodata.sk</span>
                 </div>
             </div>
         </div>
         
-        <div class="rounded-2xl border border-slate-100 bg-white p-8 shadow-sm">
+        <div class="rounded-2xl border border-gray-100 bg-white p-8 shadow-sm">
             <form class="space-y-5">
                 <div>
-                    <label class="block text-sm font-semibold text-slate-700 mb-2">Meno a priezvisko</label>
-                    <input type="text" class="w-full rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/10 transition">
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">Meno a priezvisko</label>
+                    <input type="text" class="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm outline-none focus:border-blue-500 transition">
                 </div>
                 <div>
-                    <label class="block text-sm font-semibold text-slate-700 mb-2">Váš e-mail</label>
-                    <input type="email" class="w-full rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/10 transition">
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">Váš e-mail</label>
+                    <input type="email" class="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm outline-none focus:border-blue-500 transition">
                 </div>
                 <div>
-                    <label class="block text-sm font-semibold text-slate-700 mb-2">Vaša správa</label>
-                    <textarea rows="4" class="w-full rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/10 transition resize-none"></textarea>
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">Vaša správa</label>
+                    <textarea rows="4" class="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm outline-none focus:border-blue-500 transition" style="resize: none;"></textarea>
                 </div>
                 <button type="submit" class="w-full rounded-xl bg-blue-600 py-3.5 text-sm font-bold text-white shadow-md hover:bg-blue-700 transition cursor-pointer">Odoslať dopyt</button>
             </form>
@@ -190,7 +190,7 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="border-t border-slate-100 bg-white py-12 text-center text-sm text-slate-500">
+    <footer class="border-t border-gray-100 bg-white py-12 text-center text-sm text-gray-500">
         <p>&copy; 2026 PRODATA s.r.o. Všetky práva vyhradené.</p>
     </footer>
 
