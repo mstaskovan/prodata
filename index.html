@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PRODATA | Komplexné IT riešenia</title>
     
-    <!-- Moderné načítanie Tailwind v4, ktoré simuluje klasické CSS -->
+    <!-- Načítanie Tailwind v4 -->
     <link rel="stylesheet" href="https://unpkg.com/@tailwindcss/browser@4">
     
     <!-- Google Fonts & FontAwesome -->
@@ -20,18 +20,18 @@
 </head>
 <body class="bg-[#fafafa] text-slate-900 antialiased selection:bg-blue-500 selection:text-white">
 
-    <!-- NAVIGÁCIA (Zarovnaná na max-w-6xl) -->
+    <!-- NAVIGÁCIA (Teraz ide na plnú šírku ako Asseco, logo posunuté úplne vľavo) -->
     <nav class="sticky top-0 z-50 w-full border-b border-slate-100 bg-white/80 backdrop-blur-md">
-        <div class="mx-auto flex h-20 max-w-6xl items-center justify-between px-6">
+        <div class="w-full flex h-20 items-center justify-between px-6 lg:px-12">
             
-            <!-- Logo - na rovnakej štartovacej čiare ako texty nižšie -->
+            <!-- Logo - na úplnom ľavom okraji obrazovky -->
             <div class="flex items-center">
                 <a href="#domov" class="transition hover:opacity-90">
                     <img class="h-10 w-auto" src="img/logo.jpg" alt="PRODATA">
                 </a>
             </div>
             
-            <!-- Desktop menu -->
+            <!-- Desktop menu - na pravom okraji obrazovky -->
             <div class="hidden md:flex items-center gap-8">
                 <a href="#domov" class="text-sm font-semibold text-slate-600 hover:text-blue-600 transition">Domov</a>
                 <a href="#riesenia" class="text-sm font-semibold text-slate-600 hover:text-blue-600 transition">Riešenia</a>
@@ -56,17 +56,17 @@
         </div>
     </nav>
 
-    <!-- HERO SEKCIA (Modrý pozadí pás cez celú šírku, ale TEXT zarovnaný na max-w-6xl) -->
+    <!-- HERO SEKCIA (Modrý pás aj text idú od úplného ľavého okraja) -->
     <section id="domov" class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-20">
-        <div class="mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-12 items-center px-6">
+        <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center px-6 lg:px-12">
             
-            <!-- Text začína presne pod logom -->
+            <!-- Text začína presne na tej istej úrovni ako logo hore -->
             <div class="max-w-xl text-left">
                 <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl leading-[1.15]">
                     Technológie pre moderný biznis
                 </h1>
                 <p class="mt-6 text-lg leading-8 text-blue-100/90">
-                    Sme váš stabilný partner pre hotelové, reštauračné a podnikové systémy. Od certifikovanej eKasy až po komplexný ERP HELIOS.
+                    Sme váš stabilný partner pre hotelové, reštauračné a podnikové sys-témy. Od certifikovanej eKasy až po komplexný ERP HELIOS.
                 </p>
                 <div class="mt-10 flex items-center gap-x-4">
                     <a href="#riesenia" class="rounded-xl bg-white px-6 py-3.5 text-sm font-bold text-blue-600 shadow-md hover:bg-blue-50 transition">Naše riešenia</a>
@@ -81,16 +81,16 @@
         </div>
     </section>
 
-    <!-- RIEŠENIA (Zarovnané na max-w-6xl - prvá karta presne lícuje s textom a logom) -->
-    <section id="riesenia" class="py-24 mx-auto max-w-6xl px-6">
-        <div class="text-left mb-16">
+    <!-- RIEŠENIA (Obsah nižšie zostáva vycentrovaný v peknom boxe, aby sa nerozťahoval na širokých monitoroch) -->
+    <section id="riesenia" class="py-24 mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="text-center mb-16">
             <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Čo ponúkame</h2>
             <p class="mt-2 text-lg text-slate-600">Zabezpečíme pre váš biznis hardvér aj softvér na kľúč.</p>
         </div>
 
         <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             
-            <!-- Karta 1 (HOREC) -->
+            <!-- Karta 1 -->
             <div class="group relative flex flex-col justify-between rounded-2xl border border-slate-100 bg-white p-8 shadow-sm transition hover:shadow-md">
                 <div>
                     <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
@@ -135,8 +135,8 @@
         </div>
     </section>
 
-    <!-- PODPORA (Zarovnané na max-w-6xl) -->
-    <section id="podpora" class="mx-auto max-w-6xl px-6 py-6">
+    <!-- PODPORA -->
+    <section id="podpora" class="mx-auto max-w-7xl px-6 lg:px-8 py-6">
         <div class="relative isolate overflow-hidden bg-slate-950 px-6 py-16 text-center shadow-xl rounded-3xl sm:px-16">
             <h2 class="mx-auto max-w-2xl text-3xl font-bold tracking-tight text-white sm:text-4xl">Potrebujete rýchlu pomoc?</h2>
             <p class="mx-auto mt-4 max-w-xl text-lg leading-8 text-slate-400">Náš tím technickej podpory je pripravený operatívne vyriešiť vaše problémy bezpečne na diaľku.</p>
@@ -148,8 +148,8 @@
         </div>
     </section>
 
-    <!-- KONTAKT (Zarovnané na max-w-6xl) -->
-    <section id="contact" class="py-24 max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24">
+    <!-- KONTAKT -->
+    <section id="contact" class="py-24 max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24">
         <div class="flex flex-col justify-center">
             <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Kontaktujte nás</h2>
             <p class="mt-4 text-lg text-slate-600 mb-8">Máte otázky ohľadom implementácie alebo záujem o nezáväznú ukážku našich produktov? Sme tu pre vás.</p>
