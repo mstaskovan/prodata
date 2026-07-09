@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PRODATA | Komplexné IT riešenia</title>
     
-    <!-- ČISTÉ CSS BEZ JAVASCRIPTU: Tento odkaz adblocky a štíty nikdy nezablokujú -->
+    <!-- Stabilný Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     
     <!-- Google Fonts & FontAwesome -->
@@ -16,16 +16,19 @@
     
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #fafafa; }
-        .gradient-bg { background: linear-gradient(to right, #2563eb, #4f46e5); }
+        /* PRESNÝ PRECHOD Z TVOJHO OBRÁZKA: z modernej kráľovskej modrej do jemne fialovej */
+        .gradient-bg { 
+            background: linear-gradient(135deg, #2b56f5 0%, #4f46e5 100%) !important; 
+        }
     </style>
 </head>
 <body class="text-gray-900 antialiased">
 
-    <!-- NAVIGÁCIA (Šírka 100%, logo úplne vľavo s miernym odstupom ako Asseco) -->
+    <!-- NAVIGÁCIA -->
     <nav class="sticky top-0 z-50 w-full border-b border-gray-100 bg-white shadow-sm">
         <div class="w-full flex h-20 items-center justify-between px-6 lg:px-12">
             
-            <!-- Logo - presne na ľavej hrane -->
+            <!-- Logo - úplne vľavo -->
             <div class="flex items-center">
                 <a href="#domov" class="transition opacity-100 hover:opacity-80">
                     <img class="h-10 w-auto" src="img/logo.jpg" alt="PRODATA" style="max-height: 40px;">
@@ -57,7 +60,7 @@
         </div>
     </nav>
 
-    <!-- HERO SEKCIA (Modrý pás cez celú obrazovku, text lícuje s logom hore) -->
+    <!-- HERO SEKCIA (Teraz s opraveným prechodom a presným zarovnaním) -->
     <section id="domov" class="w-full gradient-bg text-white py-20">
         <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center px-6 lg:px-12">
             
@@ -65,7 +68,7 @@
                 <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl" style="line-height: 1.15;">
                     Technológie pre moderný biznis
                 </h1>
-                <p class="mt-6 text-lg leading-8 text-blue-100">
+                <p class="mt-6 text-lg leading-8 text-blue-50">
                     Sme váš stabilný partner pre hotelové, reštauračné a podnikové systémy. Od certifikovanej eKasy až po komplexný ERP HELIOS.
                 </p>
                 <div class="mt-10 flex space-x-4">
@@ -75,13 +78,14 @@
             </div>
             
             <div class="hidden md:flex justify-end pr-6">
-                <i class="fas fa-laptop-code text-9xl opacity-20" style="font-size: 14rem;"></i>
+                <!-- Ikona notebooku s jemnou priehľadnosťou ako na obrázku -->
+                <i class="fas fa-laptop-code text-white opacity-10" style="font-size: 14rem;"></i>
             </div>
             
         </div>
     </section>
 
-    <!-- RIEŠENIA (Stredový box, aby sa karty nerozťahovali na obrovské monitory) -->
+    <!-- RIEŠENIA -->
     <section id="riesenia" class="py-24 mx-auto max-w-7xl px-6 lg:px-8">
         <div class="text-center mb-16">
             <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Čo ponúkame</h2>
@@ -89,7 +93,6 @@
         </div>
 
         <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            
             <!-- Karta 1 -->
             <div class="flex flex-col justify-between rounded-2xl border border-gray-100 bg-white p-8 shadow-sm hover:shadow-md transition">
                 <div>
@@ -131,7 +134,6 @@
                     <a href="#" class="text-sm font-semibold text-blue-600 hover:text-blue-700">Zistiť viac →</a>
                 </div>
             </div>
-
         </div>
     </section>
 
