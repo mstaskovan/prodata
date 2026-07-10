@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asseco HOREC | PRODATA</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- FontAwesome pre ikony -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 font-sans text-gray-900 antialiased">
+
+    <!-- NAVIGÁCIA (Rovnaká ako na hlavnej stránke) -->
+    <nav class="sticky top-0 z-50 w-full border-b border-gray-100 bg-white shadow-sm">
+        <div class="w-full flex h-20 items-center justify-between px-6 lg:px-12">
+            <div class="flex items-center">
+                <a href="index.html" class="transition opacity-100 hover:opacity-80">
+                    <img class="h-10 w-auto" src="img/logo.jpg" alt="PRODATA" style="max-height: 40px;">
+                </a>
+            </div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html#domov" class="text-sm font-semibold text-gray-600 hover:text-blue-600 transition">Domov</a>
+                <a href="index.html#riesenia" class="text-sm font-semibold text-blue-600 transition">Riešenia</a>
+                <a href="index.html#podpora" class="text-sm font-semibold text-gray-600 hover:text-blue-600 transition">Podpora</a>
+                <a href="index.html#contact" class="inline-flex items-center justify-center rounded-xl bg-blue-600 px-5 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-blue-700 transition">Kontakt</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SEKCIA PODSTRÁNKY -->
+    <section class="w-full bg-gradient-to-br from-slate-900 to-blue-950 text-white py-20 px-6 lg:px-12">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="inline-flex items-center rounded-md bg-blue-500/10 px-3 py-1 text-sm font-medium text-blue-400 ring-1 ring-inset ring-blue-500/30 mb-4">Ubytovací segment</span>
+                <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl mb-6">
+                    Asseco HOREC
+                </h1>
+                <p class="text-lg text-blue-100 leading-8 mb-8">
+                    Komplexný hotelový systém pre penzióny, ubytovne, wellness rezorty a hotelové siete. Zjednodušte prácu na recepcii, spravujte rezervácie z jedného miesta a poskytnite hosťom bezchybný zážitok.
+                </p>
+                <a href="#nezavazna-ponuka" class="rounded-xl bg-blue-600 px-6 py-3.5 text-sm font-bold text-white shadow-md hover:bg-blue-500 transition">Vyžiadať cenovú ponuku</a>
+            </div>
+            <div class="flex justify-center">
+                <img src="img/asseco-horec-logo-farebne.svg" alt="Horec Logo" class="w-full max-w-sm h-auto object-contain p-8 bg-white/5 rounded-3xl border border-white/10 backdrop-blur-sm">
+            </div>
+        </div>
+    </section>
+
+    <!-- HLAVNÉ BENEFITY -->
+    <section class="py-20 max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Prečo si vybrať HOREC?</h2>
+            <p class="mt-2 text-lg text-gray-600">Dokonalý prehľad o chode hotela a obsadenosti v reálnom čase.</p>
+        </div>
+
+        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <!-- Benefit 1 -->
+            <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm">
+                <div class="h-12 w-12 rounded-xl bg-blue-50 flex items-center justify-center text-xl text-blue-600 mb-6">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900 mb-2">Prehľadná štafľa</h3>
+                <p class="text-sm text-gray-600 leading-6">Grafická recepčná štafľa poskytuje okamžitý prehľad o rezerváciách, voľných izbách, príchodoch a odchodoch hostí. Všetko vybavíte rýchlo pomocou "Drag & Drop".</p>
+            </div>
+
+            <!-- Benefit 2 -->
+            <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm">
+                <div class="h-12 w-12 rounded-xl bg-blue-50 flex items-center justify-center text-xl text-blue-600 mb-6">
+                    <i class="fas fa-sync"></i>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900 mb-2">Channel Manager</h3>
+                <p class="text-sm text-gray-600 leading-6">Automatická obojstranná synchronizácia s rezervačnými portálmi (Booking.com, Expedia a pod.). Koniec duplicitným rezerváciám a manuálnemu prepisovaniu.</p>
+            </div>
+
+            <!-- Benefit 3 -->
+            <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm">
+                <div class="h-12 w-12 rounded-xl bg-blue-50 flex items-center justify-center text-xl text-blue-600 mb-6">
+                    <i class="fas fa-concierge-bell"></i>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900 mb-2">Doplnkové služby</h3>
+                <p class="text-sm text-gray-600 leading-6">Jednoduchá správa wellness procedúr, rezervácií stolov, prenájmu priestorov či parkovacích miest naviazaná priamo na účet ubytovaného hosťa.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- DETAILNÝ PREHĽAD FUNKCIÍ -->
+    <section class="py-20 bg-white border-t border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold tracking-tight text-gray-900 mb-6">Prepojenie, ktoré vám ušetrí čas</h2>
+                    <p class="text-gray-600 leading-7 mb-6">
+                        Najväčšia sila systému HOREC spočíva v jeho modulárnosti a integrácii. Dokáže komunikovať s kartovými zámkovými systémami dverí, telefónnymi ústredňami, reštauračným systémom BlueGastro či ekonomickým softvérom.
+                    </p>
+                    <ul class="space-y-4 text-sm text-gray-700">
+                        <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-3"></i> Prepojenie reštauračných účtov priamo "na izbu" hosťa</li>
+                        <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-3"></i> Online check-in pre rýchlejšie vybavenie hostí bez čakania</li>
+                        <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-3"></i> Automatické legislatívne výkazy pre cudzineckú políciu a štatistický úrad</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100">
+                    <h4 class="font-bold text-gray-950 mb-4"><i class="fas fa-tools text-blue-600 mr-2"></i> Implementácia od PRODATA</h4>
+                    <p class="text-sm text-gray-600 leading-6 mb-4">
+                        Hotelový systém vyžaduje precízne nastavenie. Postaráme sa o bezproblémový nábeh:
+                    </p>
+                    <div class="space-y-3 text-xs text-gray-600">
+                        <div class="p-3 bg-white rounded-lg border border-gray-200/60"><strong class="text-gray-900">1. Konfigurácia izieb:</strong> Nastavíme typy izieb, cenové hladiny, sezónne balíčky a vernostné zľavy.</div>
+                        <div class="p-3 bg-white rounded-lg border border-gray-200/60"><strong class="text-gray-900">2. Integrácia hardvéru:</strong> Prepojíme systém s fiškálnou eKasou, tlačiarňami a čítačkami dokladov.</div>
+                        <div class="p-3 bg-white rounded-lg border border-gray-200/60"><strong class="text-gray-900">3. Podpora a servis:</strong> Sme tu pre vás na telefóne aj počas víkendov a sviatkov, kedy je hotelová sezóna najvyťaženejšia.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NÁVRAT / AKCIA -->
+    <section id="nezavazna-ponuka" class="py-20 text-center max-w-4xl mx-auto px-6">
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">Chcete zmodernizovať váš hotel či penzión?</h3>
+        <p class="text-gray-600 mb-8">Dohodnite si s nami nezáväznú prezentáciu systému HOREC. Ukážeme vám, ako systém funguje v praxi, a pripravíme ponuku na mieru vašej kapacite.</p>
+        <div class="flex justify-center space-x-4">
+            <a href="index.html#contact" class="rounded-xl bg-blue-600 px-6 py-3.5 text-sm font-bold text-white shadow-md hover:bg-blue-700 transition">Kontaktovať nás</a>
+            <a href="index.html#riesenia" class="rounded-xl border border-gray-300 bg-white px-6 py-3.5 text-sm font-bold text-gray-700 hover:bg-gray-50 transition">Späť na riešenia</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-gray-400 py-8 text-center text-xs border-t border-gray-800">
+        <p>&copy; 2026 PRODATA plus, s.r.o. Všetky práva vyhradené.</p>
+    </footer>
+
+</body>
+</html>
