@@ -161,16 +161,20 @@
         </div>
     </section>
 
-<section id="contact" class="w-full bg-gray-50 pt-20 pb-10 px-6 lg:px-12 border-t border-gray-100">
+<!-- SEKCIA KONTAKT & MAPA -->
+    <section id="contact" class="w-full bg-gray-50 pt-20 pb-10 px-6 lg:px-12 border-t border-gray-100">
         <div class="max-w-7xl mx-auto">
             
+            <!-- Nadpisy nad sekciou -->
             <div class="mb-12 text-left">
                 <h2 class="text-4xl font-light text-blue-600 tracking-tight">Prodata plus s.r.o.</h2>
                 <h3 class="text-2xl font-bold text-gray-900 mt-2">Kontaktujte nás</h3>
             </div>
 
+            <!-- Hlavná mriežka: Údaje + Náhľad Mapy -->
             <div class="bg-white rounded-2xl border border-gray-200/80 shadow-sm overflow-hidden grid grid-cols-1 lg:grid-cols-3 gap-0">
                 
+                <!-- 1. STĹPEC: Sídlo a fakturačné údaje -->
                 <div class="p-8 sm:p-10 text-sm text-gray-600 leading-6 border-b lg:border-b-0 lg:border-r border-gray-100">
                     <h4 class="text-lg font-bold text-gray-900 mb-6 pb-2 border-b border-gray-100">Sídlo spoločnosti</h4>
                     <div class="space-y-4">
@@ -196,6 +200,7 @@
                     </div>
                 </div>
 
+                <!-- 2. STĹPEC: Rýchle kontakty -->
                 <div class="p-8 sm:p-10 text-sm text-gray-600 leading-6 border-b lg:border-b-0 lg:border-r border-gray-100 flex flex-col justify-between">
                     <div>
                         <h4 class="text-lg font-bold text-gray-900 mb-6 pb-2 border-b border-gray-100">Kontaktné údaje</h4>
@@ -233,10 +238,11 @@
                     </div>
                 </div>
 
+                <!-- 3. STĹPEC: Živá Google Mapa (Definitívne opravená verzia hľadajúca priamo textovú adresu) -->
                 <div class="w-full h-[300px] lg:h-auto min-h-[300px] relative bg-gray-100">
                     <iframe 
                         class="absolute inset-0 w-full h-full border-0"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2603.2082218131333!2d18.3248698!3d49.2724186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47146cbbf06ef065%3A0x6b2b7337cb0b5220!2zMS4gbcOhamEgODc4LzIyLCAwMjAgMDEgUMO6Y2hvdg!5e0m2!1ssk!2ssk!4v1710000000000!5m2!1ssk!2ssk"
+                        src="https://maps.google.com/maps?q=Prodata%20plus%20s.r.o.,%201.%20m%C3%A1ja%20878/22,%20020%2001%20P%C3%BAchov&t=&z=16&ie=UTF8&iwloc=&output=embed"
                         allowfullscreen="" 
                         loading="lazy" 
                         referrerpolicy="no-referrer-when-downgrade">
@@ -247,33 +253,84 @@
         </div>
     </section>
 
+    <!-- SAMOSTATNÁ SEKCIA: KONTAKTNÝ FORMULÁR -->
     <section class="w-full bg-gray-50 pb-20 px-6 lg:px-12">
         <div class="max-w-7xl mx-auto">
-            <div class="bg-white p-8 sm:p-12 rounded-2xl border border-gray-200/80 shadow-sm grid grid-cols-1 lg:grid-cols-5 gap-8 items-center">
+            <div class="bg-white p-8 sm:p-12 rounded-2xl border border-gray-200/80 shadow-sm grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
                 
-                <div class="lg:col-span-2 space-y-4 pr-0 lg:pr-8">
+                <!-- Sprievodný text vľavo (2 stĺpce) -->
+                <div class="lg:col-span-2 space-y-4 lg:sticky lg:top-8">
                     <h4 class="text-2xl font-bold text-gray-900 tracking-tight">Napíšte nám</h4>
                     <p class="text-gray-600 leading-7">
                         Máte otázky ohľadom implementácie alebo záujem o nezáväznú ukážku našich produktov? Sme tu pre vás.
                     </p>
                 </div>
 
-                <form action="#" method="POST" class="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <!-- Formulár Asseco štýl vpravo (3 stĺpce) -->
+                <form action="#" method="POST" class="lg:col-span-3 space-y-8">
+                    
+                    <!-- Časť 1: Údaje o spoločnosti -->
                     <div>
-                        <label for="name" class="block text-xs font-semibold text-gray-600 uppercase">Meno a priezvisko</label>
-                        <input type="text" name="name" id="name" autocomplete="name" required class="mt-1 block w-full rounded-lg border border-gray-200 bg-gray-50 px-3 py-2 text-sm text-gray-900 focus:border-blue-500 focus:bg-white focus:outline-none transition">
+                        <h5 class="text-base font-bold text-gray-900 mb-4 border-b border-gray-100 pb-2">Údaje o spoločnosti</h5>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label for="company_name" class="block text-xs font-semibold text-gray-600 uppercase">Názov spoločnosti</label>
+                                <input type="text" name="company_name" id="company_name" class="mt-1 block w-full rounded-lg border border-gray-200 bg-gray-50 px-3 py-2 text-sm text-gray-900 focus:border-blue-500 focus:bg-white focus:outline-none transition">
+                            </div>
+                            <div>
+                                <label for="city" class="block text-xs font-semibold text-gray-600 uppercase">Mesto</label>
+                                <input type="text" name="city" id="city" class="mt-1 block w-full rounded-lg border border-gray-200 bg-gray-50 px-3 py-2 text-sm text-gray-900 focus:border-blue-500 focus:bg-white focus:outline-none transition">
+                            </div>
+                        </div>
                     </div>
+
+                    <!-- Časť 2: Kontaktná osoba -->
                     <div>
-                        <label for="email" class="block text-xs font-semibold text-gray-600 uppercase">E-mail</label>
-                        <input type="email" name="email" id="email" autocomplete="email" required class="mt-1 block w-full rounded-lg border border-gray-200 bg-gray-50 px-3 py-2 text-sm text-gray-900 focus:border-blue-500 focus:bg-white focus:outline-none transition">
+                        <h5 class="text-base font-bold text-gray-900 mb-4 border-b border-gray-100 pb-2">Kontaktná osoba</h5>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label for="name" class="block text-xs font-semibold text-gray-600 uppercase">Meno a priezvisko *</label>
+                                <input type="text" name="name" id="name" autocomplete="name" required class="mt-1 block w-full rounded-lg border border-gray-200 bg-gray-50 px-3 py-2 text-sm text-gray-900 focus:border-blue-500 focus:bg-white focus:outline-none transition">
+                            </div>
+                            <div>
+                                <label for="position" class="block text-xs font-semibold text-gray-600 uppercase">Pozícia/oddelenie</label>
+                                <input type="text" name="position" id="position" class="mt-1 block w-full rounded-lg border border-gray-200 bg-gray-50 px-3 py-2 text-sm text-gray-900 focus:border-blue-500 focus:bg-white focus:outline-none transition">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-xs font-semibold text-gray-600 uppercase">Telefón *</label>
+                                <input type="tel" name="phone" id="phone" autocomplete="tel" required class="mt-1 block w-full rounded-lg border border-gray-200 bg-gray-50 px-3 py-2 text-sm text-gray-900 focus:border-blue-500 focus:bg-white focus:outline-none transition">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-xs font-semibold text-gray-600 uppercase">E-mail *</label>
+                                <input type="email" name="email" id="email" autocomplete="email" required class="mt-1 block w-full rounded-lg border border-gray-200 bg-gray-50 px-3 py-2 text-sm text-gray-900 focus:border-blue-500 focus:bg-white focus:outline-none transition">
+                            </div>
+                            <div class="sm:col-span-2">
+                                <label for="message" class="block text-xs font-semibold text-gray-600 uppercase">Poznámka</label>
+                                <textarea id="message" name="message" rows="4" class="mt-1 block w-full rounded-lg border border-gray-200 bg-gray-50 px-3 py-2 text-sm text-gray-900 focus:border-blue-500 focus:bg-white focus:outline-none transition"></textarea>
+                            </div>
+                        </div>
                     </div>
-                    <div class="sm:col-span-2">
-                        <label for="message" class="block text-xs font-semibold text-gray-600 uppercase">Správa</label>
-                        <textarea id="message" name="message" rows="3" required class="mt-1 block w-full rounded-lg border border-gray-200 bg-gray-50 px-3 py-2 text-sm text-gray-900 focus:border-blue-500 focus:bg-white focus:outline-none transition"></textarea>
+
+                    <!-- Informácia o povinných poliach & GDPR -->
+                    <div class="space-y-4 pt-2 border-t border-gray-100">
+                        <p class="text-xs text-gray-500 italic">* všetky polia označené hviezdičkou sú povinné</p>
+                        
+                        <div class="flex items-start">
+                            <div class="flex h-5 items-center">
+                                <input id="gdpr" name="gdpr" type="checkbox" required class="h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500 cursor-pointer">
+                            </div>
+                            <div class="ml-3 text-xs leading-5 text-gray-600">
+                                <label for="gdpr" class="cursor-pointer select-none">
+                                    Podľa zákona č. 18/2018 Z. z. o ochrane osobných údajov udeľujem spoločnosti Prodata plus s.r.o. ako dotknutá osoba súhlas so spracovaním mojich osobných údajov v rozsahu tohto vyhlásenia.
+                                </label>
+                            </div>
+                        </div>
                     </div>
-                    <div class="sm:col-span-2 pt-2">
-                        <button type="submit" class="w-full sm:w-auto inline-flex items-center justify-center rounded-xl bg-blue-600 px-8 py-3.5 text-sm font-bold text-white shadow-sm hover:bg-blue-700 focus:outline-none transition">
-                            Odoslať správu
+
+                    <!-- Tlačidlo odoslať -->
+                    <div class="pt-2">
+                        <button type="submit" class="w-full sm:w-auto inline-flex items-center justify-center rounded-xl bg-blue-600 px-10 py-3.5 text-sm font-bold text-white shadow-sm hover:bg-blue-700 focus:outline-none transition uppercase tracking-wider">
+                            Odoslať
                         </button>
                     </div>
                 </form>
