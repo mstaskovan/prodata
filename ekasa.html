@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eKasa Riešenia | Prodata plus s.r.o.</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+    <!-- NAVIGÁCIA (MENU) -->
+    <nav class="sticky top-0 z-50 bg-white border-b border-gray-200/80 backdrop-blur-md bg-white/95">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center">
+                        <img src="logo.png" alt="PRODATA logo" class="h-10 w-auto">
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-sm font-semibold text-gray-600 hover:text-blue-600 transition">Úvod</a>
+                    <a href="ponuka.html" class="text-sm font-semibold text-gray-600 hover:text-blue-600 transition">Ponuka</a>
+                    <a href="ekasa.html" class="text-sm font-semibold text-blue-600 border-b-2 border-blue-600 pb-1">eKasa</a>
+                    <a href="o-nas.html" class="text-sm font-semibold text-gray-600 hover:text-blue-600 transition">O nás</a>
+                    <a href="podpora.html" class="text-sm font-semibold text-gray-600 hover:text-blue-600 transition">Podpora</a>
+                    <a href="kontakt.html" class="text-sm font-semibold text-gray-600 hover:text-blue-600 transition">Kontakt</a>
+                </div>
+
+                <!-- Jazyky & CTA Tlačidlo -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <span class="text-xs font-bold text-gray-400"><span class="text-blue-600 cursor-pointer">SK</span> | <span class="hover:text-gray-600 cursor-pointer">CZ</span></span>
+                    <a href="kontakt.html" class="rounded-xl bg-blue-600 px-5 py-2.5 text-xs font-bold text-white shadow-sm hover:bg-blue-700 transition uppercase tracking-wider">
+                        Nezáväzný dopyt
+                    </a>
+                </div>
+
+                <!-- Mobilné Menu Tlačidlo -->
+                <div class="md:hidden flex items-center">
+                    <button type="button" class="text-gray-600 hover:text-gray-900 focus:outline-none" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Rozbaľovacie Mobilné Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-200 px-4 pt-2 pb-4 space-y-2 shadow-lg">
+            <a href="index.html" class="block px-3 py-2 rounded-lg text-base font-semibold text-gray-600 hover:bg-gray-50">Úvod</a>
+            <a href="ponuka.html" class="block px-3 py-2 rounded-lg text-base font-semibold text-gray-600 hover:bg-gray-50">Ponuka</a>
+            <a href="ekasa.html" class="block px-3 py-2 rounded-lg text-base font-semibold text-blue-600 bg-blue-50/50">eKasa</a>
+            <a href="o-nas.html" class="block px-3 py-2 rounded-lg text-base font-semibold text-gray-600 hover:bg-gray-50">O nás</a>
+            <a href="podpora.html" class="block px-3 py-2 rounded-lg text-base font-semibold text-gray-600 hover:bg-gray-50">Podpora</a>
+            <a href="kontakt.html" class="block px-3 py-2 rounded-lg text-base font-semibold text-gray-600 hover:bg-gray-50">Kontakt</a>
+        </div>
+    </nav>
+
+    <!-- HERO SEKCE -->
+    <header class="relative bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 py-20 text-white overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl">
+                <span class="inline-flex items-center gap-1.5 rounded-full bg-blue-500/10 px-3 py-1 text-xs font-medium text-blue-400 ring-1 ring-inset ring-blue-500/20 mb-4">
+                    Online registračné pokladnice (ORP)
+                </span>
+                <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight mb-6">
+                    Komplexné eKasa riešenia pre váš biznis
+                </h1>
+                <p class="text-lg text-slate-300 leading-relaxed max-w-2xl">
+                    Všetky naše systémy sú plne certifikované a pripravené na priame online prepojenie s portálom Finančnej správy SR. Zabezpečíme pre vás hardvér, softvér aj hladkú implementáciu.
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- INTRO & LEGISLATÍVA -->
+    <section class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl font-bold text-gray-950 mb-6">Čo je projekt eKasa?</h2>
+                <div class="space-y-4 text-gray-600 leading-relaxed">
+                    <p>
+                        eKasa je projekt navrhnutý Finančnou správou SR (FS SR), v ktorom ide o povinné **online napojenie všetkých registračných pokladníc** na centrálny portál štátnej správy. Z klasických elektronických registračných pokladníc (ERP) sa tak stávajú online registračné pokladnice (ORP).
+                    </p>
+                    <p>
+                        Dáta o každej transakcii sú v reálnom čase automaticky odosielané cez internet a ukladané ako v centrálnom úložisku eKasa, tak aj v lokálnom chránenom dátovom úložisku (CHDÚ). Naša spoločnosť vám pomôže prejsť celým procesom bez akýchkoľvek administratívnych stresov.
+                    </p>
+                </div>
+            </div>
+            <div class="bg-white p-8 rounded-2xl border border-gray-200/60 shadow-sm">
+                <h3 class="text-lg font-bold text-gray-950 mb-4"><i class="fas fa-check-circle text-emerald-500 mr-2"></i>Kompatibilita systémov</h3>
+                <p class="text-sm text-gray-500 mb-6">Na legislatívny systém eKasa sú plne pripravené a optimalizované všetky nami dodávané produkty Asseco Solutions:</p>
+                <div class="grid grid-cols-2 gap-3">
+                    <div class="flex items-center space-x-2 p-3 bg-gray-50 rounded-xl border border-gray-100"><i class="fas fa-terminal text-blue-600 text-xs"></i> <span class="text-sm font-medium text-gray-700">Asseco SPIN</span></div>
+                    <div class="flex items-center space-x-2 p-3 bg-gray-50 rounded-xl border border-gray-100"><i class="fas fa-terminal text-blue-600 text-xs"></i> <span class="text-sm font-medium text-gray-700">Asseco QASIDA</span></div>
+                    <div class="flex items-center space-x-2 p-3 bg-gray-50 rounded-xl border border-gray-100"><i class="fas fa-terminal text-blue-600 text-xs"></i> <span class="text-sm font-medium text-gray-700">Asseco HELIOS</span></div>
+                    <div class="flex items-center space-x-2 p-3 bg-gray-50 rounded-xl border border-gray-100"><i class="fas fa-terminal text-blue-600 text-xs"></i> <span class="text-sm font-medium text-gray-700">Asseco BLUEGASTRO</span></div>
+                    <div class="flex items-center space-x-2 p-3 bg-gray-50 rounded-xl border border-gray-100"><i class="fas fa-terminal text-blue-600 text-xs"></i> <span class="text-sm font-medium text-gray-700">Asseco HOREC</span></div>
+                    <div class="flex items-center space-x-2 p-3 bg-gray-50 rounded-xl border border-gray-100"><i class="fas fa-terminal text-blue-600 text-xs"></i> <span class="text-sm font-medium text-gray-700">Retail Kasa</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KROKY K PRIPOJENIU -->
+    <section class="py-16 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Čo je potrebné k úspešnému pripojeniu?</h2>
+                <p class="mt-4 text-slate-400">Kompletný postup nasadenia eKasy krok za krokom, s ktorým vám kompletne pomôžeme.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Krok 1 -->
+                <div class="relative flex flex-col p-6 bg-slate-800/50 rounded-2xl border border-slate-700/50">
+                    <div class="w-12 h-12 bg-blue-600/10 text-blue-400 rounded-xl flex items-center justify-center font-bold text-lg mb-4 ring-1 ring-blue-500/20">1</div>
+                    <h4 class="text-base font-bold mb-2">Výber softvéru</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">Zvolíme vhodný pokladničný softvér z rodiny Asseco presne podľa individuálnych potrieb a charakteru vašej prevádzky.</p>
+                </div>
+                <!-- Krok 2 -->
+                <div class="relative flex flex-col p-6 bg-slate-800/50 rounded-2xl border border-slate-700/50">
+                    <div class="w-12 h-12 bg-blue-600/10 text-blue-400 rounded-xl flex items-center justify-center font-bold text-lg mb-4 ring-1 ring-blue-500/20">2</div>
+                    <h4 class="text-base font-bold mb-2">Výber hardvéru</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">Dodáme certifikované pokladničné zariadenia, fiškálne tlačiarne alebo all-in-one POS systémy s chráneným úložiskom.</p>
+                </div>
+                <!-- Krok 3 -->
+                <div class="relative flex flex-col p-6 bg-slate-800/50 rounded-2xl border border-slate-700/50">
+                    <div class="w-12 h-12 bg-blue-600/10 text-blue-400 rounded-xl flex items-center justify-center font-bold text-lg mb-4 ring-1 ring-blue-500/20">3</div>
+                    <h4 class="text-base font-bold mb-2">Žiadosť o kód (KP)</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">Prostredníctvom eKasa zóny na portáli Finančnej správy podáte žiadosť o pridelenie kódu online registračnej pokladnice.</p>
+                </div>
+                <!-- Krok 4 -->
+                <div class="relative flex flex-col p-6 bg-slate-800/50 rounded-2xl border border-slate-700/50">
+                    <div class="w-12 h-12 bg-emerald-600/10 text-emerald-400 rounded-xl flex items-center justify-center font-bold text-lg mb-4 ring-1 ring-emerald-500/20"><i class="fas fa-check"></i></div>
+                    <h4 class="text-base font-bold mb-2">Inicializácia & Servis</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">Nahráme do zariadenia inicializačný balíček, autentifikačné údaje, všetko otestujeme a zaškolíme váš personál.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VÝMENA AUTENTIFIKAČNÝCH ÚDAJOV (UPOZORNENIE) -->
+    <section class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-100 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8">
+            <div class="max-w-2xl">
+                <div class="flex items-center gap-2 text-blue-700 font-bold text-sm mb-2">
+                    <i class="fas fa-exclamation-triangle"></i> Dôležité upozornenie pre prevádzkovateľov
+                </div>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-950 mb-3">Končí platnosť vašich eKasa certifikátov?</h3>
+                <p class="text-sm text-gray-600 leading-relaxed">
+                    Platnosť autentifikačných údajov (AU), ktoré vydáva Finančná správa SR pre online pokladnice, je **obmedzená na 2 roky**. Pokladnica vás na blížiacu sa expiráciu upozorní 30 dní vopred. Odporúčame výmenu vykonať včas prostredníctvom našej servisnej organizácie, aby nedošlo k zablokovaniu komunikácie.
+                </p>
+            </div>
+            <a href="kontakt.html" class="whitespace-nowrap rounded-xl bg-blue-600 px-6 py-3.5 text-xs font-bold text-white shadow-md hover:bg-blue-700 transition uppercase tracking-wider">
+                Objednať servis certifikátu
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div>
+                    <p class="text-sm font-bold text-white">Prodata plus s.r.o.</p>
+                    <p class="text-xs mt-1">Autorizovaný partner Asseco Solutions | Všetky práva vyhradené &copy; 2026</p>
+                </div>
+                <div class="flex space-x-6 text-xs font-semibold">
+                    <a href="index.html" class="hover:text-white transition">Úvod</a>
+                    <a href="ekasa.html" class="text-white">eKasa</a>
+                    <a href="kontakt.html" class="hover:text-white transition">Kontakt</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
