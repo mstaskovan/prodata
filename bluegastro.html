@@ -9,21 +9,61 @@
 </head>
 <body class="bg-gray-50 font-sans text-gray-900 antialiased">
 
+   <!-- NAVIGÁCIA (S opraveným logom, odkazmi a mobilným menu) -->
     <nav class="sticky top-0 z-50 w-full border-b border-gray-100 bg-white shadow-sm">
         <div class="w-full flex h-20 items-center justify-between px-6 lg:px-12">
+            
+            <!-- Logo - smeruje na absolútnu URL, s opraveným logo.png -->
             <div class="flex items-center">
-                <a href="index.html" class="transition opacity-100 hover:opacity-80">
+                <a href="https://mstaskovan.github.io/prodata" class="transition opacity-100 hover:opacity-80">
                     <img class="h-10 w-auto" src="img/logo.png" alt="PRODATA" style="max-height: 40px;">
                 </a>
             </div>
+            
+            <!-- Desktop menu (Opravený odkaz pre Domov) -->
             <div class="hidden md:flex items-center space-x-8">
-                <a href="index.html#domov" class="text-sm font-semibold text-gray-600 hover:text-blue-600 transition">Domov</a>
-                <a href="index.html#riesenia" class="text-sm font-semibold text-blue-600 transition">Riešenia</a>
-                <a href="index.html#podpora" class="text-sm font-semibold text-gray-600 hover:text-blue-600 transition">Podpora</a>
-                <a href="index.html#contact" class="inline-flex items-center justify-center rounded-xl bg-blue-600 px-5 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-blue-700 transition">Kontakt</a>
+                <a href="https://mstaskovan.github.io/prodata" class="text-sm font-semibold text-gray-600 hover:text-blue-600 transition">Domov</a>
+                <!-- Na bluegastro.html je "Riešenia" aktívna, takže zmeníme text-gray-600 na text-blue-600 a pridáme font-bold -->
+                <a href="https://mstaskovan.github.io/prodata#riesenia" class="text-sm font-bold text-blue-600 transition">Riešenia</a>
+                <a href="https://mstaskovan.github.io/prodata#podpora" class="text-sm font-semibold text-gray-600 hover:text-blue-600 transition">Podpora</a>
+                <a href="https://mstaskovan.github.io/prodata#contact" class="inline-flex items-center justify-center rounded-xl bg-blue-600 px-5 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-blue-700 transition">Kontakt</a>
+            </div>
+
+            <!-- Mobilné menu tlačidlo (PRIDANÉ TU) -->
+            <div class="flex md:hidden">
+                <button id="menu-btn-ps" class="inline-flex items-center justify-center rounded-lg p-2 text-gray-700 hover:bg-gray-100 transition focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
             </div>
         </div>
+
+        <!-- Rozbaľovacie menu pre mobily (PRIDANÉ TU - pre podstránky s absolútnymi odkazmi) -->
+        <div id="mobile-menu-ps" class="hidden border-b border-gray-100 bg-white px-6 py-4 space-y-2 md:hidden">
+            <a href="https://mstaskovan.github.io/prodata" class="block rounded-lg px-3 py-2 text-base font-semibold text-gray-700 hover:bg-gray-50">Domov</a>
+            <a href="https://mstaskovan.github.io/prodata#riesenia" class="block rounded-lg px-3 py-2 text-base font-semibold text-gray-700 hover:bg-gray-50">Riešenia</a>
+            <a href="https://mstaskovan.github.io/prodata#podpora" class="block rounded-lg px-3 py-2 text-base font-semibold text-gray-700 hover:bg-gray-50">Podpora</a>
+            <a href="https://mstaskovan.github.io/prodata#contact" class="block rounded-lg bg-blue-600 px-3 py-3 text-center text-base font-bold text-white shadow-sm hover:bg-blue-700">Kontakt</a>
+        </div>
     </nav>
+
+    <!-- !!! DÔLEŽITÉ: JS SKRIPT PRE MOBILNÉ MENU MUSÍ BYŤ AJ NA PODSTRÁNKE !!! -->
+    <script>
+        // Používame mierne odlišné ID, aby sme predišli chaosu s hlavným skriptom na index.html
+        const menuBtnPs = document.getElementById('menu-btn-ps');
+        const mobileMenuPs = document.getElementById('mobile-menu-ps');
+
+        menuBtnPs.addEventListener('click', () => {
+            mobileMenuPs.classList.toggle('hidden');
+        });
+
+        // Zatvorenie menu po kliknutí na odkaz
+        const menuLinksPs = mobileMenuPs.querySelectorAll('a');
+        menuLinksPs.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuPs.classList.add('hidden');
+            });
+        });
+    </script>
 
     <section class="w-full bg-gradient-to-br from-blue-900 to-indigo-950 text-white py-20 px-6 lg:px-12">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
