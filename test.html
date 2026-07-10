@@ -162,43 +162,118 @@
     </section>
 
     <!-- KONTAKT -->
-    <section id="contact" class="py-24 max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12">
-        <div class="flex flex-col justify-center">
-            <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Kontaktujte nás</h2>
-            <p class="mt-4 text-lg text-gray-600 mb-8">Máte otázky ohľadom implementácie alebo záujem o nezáväznú ukážku našich produktov? Sme tu pre vás.</p>
+    <!-- SEKCOA KONTAKT & FORMULÁR (Zjednotený Asseco dizajn s reálnymi údajmi PRODATA Púchov) -->
+    <section id="contact" class="w-full bg-gray-50 py-20 px-6 lg:px-12 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto">
             
-            <div class="space-y-6">
-                <div class="flex items-center space-x-4">
-                    <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-50 text-blue-600"><i class="fas fa-map-marker-alt"></i></div>
-                    <span class="font-medium text-gray-700">Púchov, Slovenská republika</span>
-                </div>
-                <div class="flex items-center space-x-4">
-                    <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-50 text-blue-600"><i class="fas fa-phone"></i></div>
-                    <span class="font-medium text-gray-700">+421 123 456 789</span>
-                </div>
-                <div class="flex items-center space-x-4">
-                    <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-50 text-blue-600"><i class="fas fa-envelope"></i></div>
-                    <span class="font-medium text-gray-700">prodata@prodata.sk</span>
-                </div>
+            <!-- Nadpisy nad sekciou -->
+            <div class="mb-12 text-left">
+                <h2 class="text-4xl font-light text-blue-600 tracking-tight">Prodata plus s.r.o.</h2>
+                <h3 class="text-2xl font-bold text-gray-900 mt-2">Kontaktujte nás</h3>
             </div>
-        </div>
-        
-        <div class="rounded-2xl border border-gray-100 bg-white p-8 shadow-sm">
-            <form class="space-y-5">
-                <div>
-                    <label class="block text-sm font-semibold text-gray-700 mb-2">Meno a priezvisko</label>
-                    <input type="text" class="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm outline-none focus:border-blue-500 transition">
+
+            <!-- Hlavná mriežka: Údaje + Formulár -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start mb-12">
+                
+                <!-- 1. STĹPEC: Sídlo a fakturačné údaje -->
+                <div class="space-y-6 text-sm text-gray-600 leading-6">
+                    <div>
+                        <h4 class="text-lg font-bold text-gray-900 mb-4 border-b border-gray-200 pb-2">Sídlo spoločnosti</h4>
+                        <p class="font-bold text-gray-900">Prodata plus s.r.o.</p>
+                        <p>1. mája 878/22</p>
+                        <p>020 01 Púchov</p>
+                        <p>Slovensko</p>
+                    </div>
+                    
+                    <div class="pt-2">
+                        <p><span class="font-semibold text-gray-800">IČO:</span> 36003310</p>
+                        <p><span class="font-semibold text-gray-800">DIČ:</span> 2020442281</p>
+                        <p><span class="font-semibold text-gray-800">IČ DPH:</span> SK2020442281</p>
+                    </div>
+
+                    <div class="pt-2 text-xs text-gray-500">
+                        <p class="font-semibold text-gray-700 text-sm mb-1">Bankové spojenie:</p>
+                        <p>63 668 008/0900 (Slovenská sporiteľňa)</p>
+                        <p class="mt-3 italic">Spoločnosť je registrovaná v obchodnom registri Okresného súdu v Trenčíne, odd. Sro, vl. č. 3383/R.</p>
+                    </div>
                 </div>
-                <div>
-                    <label class="block text-sm font-semibold text-gray-700 mb-2">Váš e-mail</label>
-                    <input type="email" class="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm outline-none focus:border-blue-500 transition">
+
+                <!-- 2. STĹPEC: Rýchle kontakty a podpory -->
+                <div class="space-y-6 text-sm text-gray-600 leading-6">
+                    <div>
+                        <h4 class="text-lg font-bold text-gray-900 mb-4 border-b border-gray-200 pb-2">Kontaktné údaje</h4>
+                        
+                        <div class="space-y-3">
+                            <p class="flex items-center">
+                                <i class="fas fa-phone-alt text-blue-600 mr-3 w-4"></i>
+                                <span><span class="font-semibold">Tel:</span> +421 42 4631 873</span>
+                            </p>
+                            <p class="flex items-start">
+                                <i class="fas fa-mobile-alt text-blue-600 mr-3 mt-1 w-4"></i>
+                                <span>
+                                    <span class="font-semibold">Mobil (pre HeO):</span><br>
+                                    <a href="tel:+421911103096" class="hover:text-blue-600">+421 911 103 096</a>
+                                </span>
+                            </p>
+                            <p class="flex items-start">
+                                <i class="fas fa-mobile-alt text-blue-600 mr-3 mt-1 w-4"></i>
+                                <span>
+                                    <span class="font-semibold">Mobil (pre HRS):</span><br>
+                                    <a href="tel:+421911103097" class="hover:text-blue-600">+421 911 103 097</a>
+                                </span>
+                            </p>
+                            <p class="flex items-center pt-2 border-t border-gray-100">
+                                <i class="fas fa-envelope text-blue-600 mr-3 w-4"></i>
+                                <span><span class="font-semibold">E-mail:</span> <a href="mailto:prodata@prodata.sk" class="text-blue-600 hover:underline">prodata@prodata.sk</a></span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Tlačidlo Navigovať -->
+                    <div class="pt-4">
+                        <a href="https://maps.google.com/?q=Prodata+plus+s.r.o.,+1.+mája+878/22,+020+01+Púchov" target="_blank" class="inline-flex items-center text-xs font-bold tracking-wider text-blue-600 uppercase hover:text-blue-700 transition">
+                            NAVIGOVAŤ NA MAPE <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                        </a>
+                    </div>
                 </div>
-                <div>
-                    <label class="block text-sm font-semibold text-gray-700 mb-2">Vaša správa</label>
-                    <textarea rows="4" class="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm outline-none focus:border-blue-500 transition" style="resize: none;"></textarea>
+
+                <!-- 3. STĹPEC: Kontaktný formulár (Integrovaný do čistého dizajnu) -->
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-gray-200 shadow-sm">
+                    <h4 class="text-lg font-bold text-gray-900 mb-4">Napíšte nám</h4>
+                    <form action="#" method="POST" class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-xs font-semibold text-gray-600 uppercase">Meno a priezvisko</label>
+                            <input type="text" name="name" id="name" autocomplete="name" required class="mt-1 block w-full rounded-lg border border-gray-200 bg-gray-50 px-3 py-2 text-sm text-gray-900 focus:border-blue-500 focus:bg-white focus:outline-none transition">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-xs font-semibold text-gray-600 uppercase">E-mail</label>
+                            <input type="email" name="email" id="email" autocomplete="email" required class="mt-1 block w-full rounded-lg border border-gray-200 bg-gray-50 px-3 py-2 text-sm text-gray-900 focus:border-blue-500 focus:bg-white focus:outline-none transition">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-xs font-semibold text-gray-600 uppercase">Správa</label>
+                            <textarea id="message" name="message" rows="4" required class="mt-1 block w-full rounded-lg border border-gray-200 bg-gray-50 px-3 py-2 text-sm text-gray-900 focus:border-blue-500 focus:bg-white focus:outline-none transition"></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" class="w-full inline-flex items-center justify-center rounded-xl bg-blue-600 px-4 py-3 text-sm font-bold text-white shadow-sm hover:bg-blue-700 focus:outline-none transition">
+                                Odoslať správu
+                            </button>
+                        </div>
+                    </form>
                 </div>
-                <button type="submit" class="w-full rounded-xl bg-blue-600 py-3.5 text-sm font-bold text-white shadow-md hover:bg-blue-700 transition cursor-pointer">Odoslať dopyt</button>
-            </form>
+
+            </div>
+
+            <!-- Spodný riadok: Živá Google Mapa pre Púchov, 1. mája -->
+            <div class="w-full h-[350px] rounded-2xl border border-gray-200 shadow-sm overflow-hidden relative">
+                <iframe 
+                    class="absolute inset-0 w-full h-full border-0"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2603.2084533036814!2d18.324869877287957!3d49.27241857139151!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47146cbbf06ef065%3A0x6b2b7337cb0b5220!2zMS4gbcOhamEgODc4LzIyLCAwMjAgMDEgUMO6Y2hvdg!5e0m2!1ssk!2ssk!4v1710000000000!5m2!1ssk!2ssk"
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
         </div>
     </section>
 
