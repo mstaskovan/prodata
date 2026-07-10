@@ -239,27 +239,14 @@
                 </div>
 
                <!-- 3. STĹPEC: Flexibilná mapa s podporou pre mobilné zariadenia -->
-                <div class="w-full min-h-[350px] lg:h-full lg:min-h-full relative bg-gray-100 flex overflow-hidden group">
-                    <!-- Na PC sa načíta štandardný iframe -->
+                <div class="w-full h-[350px] lg:h-full lg:min-h-full">
                     <iframe 
-                        title="Google Mapa - Prodata plus s.r.o."
-                        class="hidden md:block absolute inset-0 w-full h-full border-0"
-                        src="https://maps.google.com/maps?q=Prodata%20plus%20s.r.o.,%201.%20m%C3%A1ja%20878/22,%20020%2001%20P%C3%BAchov&t=&z=16&ie=UTF8&iwloc=&output=embed"
-                        allowfullscreen>
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2605.21544778385!2d18.322288076935397!3d49.12057997136938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47146603a1158913%3A0xbc6335191c499839!2s1.%20m%C3%A1ja%20878%2F22%2C%20020%2001%20P%C3%BAchov!5e0!3m2!1ssk!3ssk!4v1714000000000!5m2!1ssk!3ssk" 
+                        class="w-full h-full border-0"
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
-
-                    <!-- Na mobiloch a tabletoch sa zobrazí čistý, bezpečný layout s preklikom, ktorý mobil nikdy nezablokuje -->
-                    <div class="md:hidden absolute inset-0 w-full h-full flex flex-col items-center justify-center p-6 text-center bg-gradient-to-br from-gray-50 to-gray-100 border-t border-gray-100">
-                        <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mb-4 shadow-sm">
-                            <i class="fas fa-map-marked-alt text-2xl"></i>
-                        </div>
-                        <h5 class="text-base font-bold text-gray-900 mb-1">Interaktívna mapa</h5>
-                        <p class="text-xs text-gray-500 max-w-xs mb-6">Otvorte polohu našej spoločnosti priamo v aplikácii Google Maps vo vašom zariadení.</p>
-                        
-                        <a href="https://maps.google.com/?q=Prodata+plus+s.r.o.,+1.+mája+878/22,+020+01+P%C3%BAchov" target="_blank" class="inline-flex items-center justify-center rounded-xl bg-blue-600 px-6 py-3 text-xs font-bold text-white shadow-md hover:bg-blue-700 transition uppercase tracking-wider">
-                            <i class="fas fa-location-arrow mr-2"></i> Otvoriť mapu
-                        </a>
-                    </div>
                 </div>
 
             </div>
