@@ -25,17 +25,15 @@
 <body class="text-gray-900 antialiased">
 
     <!-- NAVIGÁCIA -->
-    <nav class="sticky top-0 z-50 w-full border-b border-gray-100 bg-white shadow-sm">
+<nav class="sticky top-0 z-50 w-full border-b border-gray-100 bg-white shadow-sm">
         <div class="w-full flex h-20 items-center justify-between px-6 lg:px-12">
             
-            <!-- Logo - úplne vľavo -->
             <div class="flex items-center">
                 <a href="#domov" class="transition opacity-100 hover:opacity-80">
-                    <img class="h-10 w-auto" src="img/logo.jpg" alt="PRODATA" style="max-height: 40px;">
+                    <img class="h-10 w-auto" src="img/logo.png" alt="PRODATA" style="max-height: 40px;">
                 </a>
             </div>
             
-            <!-- Desktop menu -->
             <div class="hidden md:flex items-center space-x-8">
                 <a href="#domov" class="text-sm font-semibold text-gray-600 hover:text-blue-600 transition">Domov</a>
                 <a href="#riesenia" class="text-sm font-semibold text-gray-600 hover:text-blue-600 transition">Riešenia</a>
@@ -43,7 +41,6 @@
                 <a href="#contact" class="inline-flex items-center justify-center rounded-xl bg-blue-600 px-5 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-blue-700 transition">Kontakt</a>
             </div>
 
-            <!-- Mobilné menu tlačidlo -->
             <div class="flex md:hidden">
                 <button id="menu-btn" class="inline-flex items-center justify-center rounded-lg p-2 text-gray-700 hover:bg-gray-100 transition focus:outline-none">
                     <i class="fas fa-bars text-xl"></i>
@@ -51,7 +48,6 @@
             </div>
         </div>
 
-        <!-- Rozbaľovacie menu pre mobily -->
         <div id="mobile-menu" class="hidden border-b border-gray-100 bg-white px-6 py-4 space-y-2 md:hidden">
             <a href="#domov" class="block rounded-lg px-3 py-2 text-base font-semibold text-gray-700 hover:bg-gray-50">Domov</a>
             <a href="#riesenia" class="block rounded-lg px-3 py-2 text-base font-semibold text-gray-700 hover:bg-gray-50">Riešenia</a>
@@ -60,11 +56,10 @@
         </div>
     </nav>
 
-   <!-- HERO SEKCIA (Prechod zapísaný natvrdo priamo v elemente, aby obišiel cache) -->
-    <section id="domov" class="w-full text-white py-20" style="background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #4f46e5 100%) !important;">
-        <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center px-6 lg:px-12">
+    <section id="domov" class="w-full text-white py-12 md:py-20 overflow-hidden" style="background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #4f46e5 100%) !important;">
+        <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center px-6 lg:px-12 max-w-[1600px] mx-auto">
             
-            <div class="max-w-xl text-left">
+            <div class="max-w-xl text-left order-1">
                 <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl" style="line-height: 1.15;">
                     Technológie pre moderný biznis
                 </h1>
@@ -77,15 +72,13 @@
                 </div>
             </div>
             
-            <div class="hidden md:flex justify-end pr-6">
-                <!-- Ikona notebooku -->
-                <i class="fas fa-laptop-code text-white opacity-10" style="font-size: 14rem;"></i>
+            <div class="w-full flex justify-center md:justify-end order-2 mt-6 md:mt-0">
+                <img src="img/uvod2.png" alt="PRODATA Portfólio systémov" class="w-full max-w-lg md:max-w-xl lg:max-w-2xl h-auto object-contain drop-shadow-2xl">
             </div>
             
         </div>
     </section>
 
-    <!-- RIEŠENIA -->
 <!-- RIEŠENIA (Rozdelené na 4 samostatné produkty s novými logami) -->
     <section id="riesenia" class="py-24 mx-auto max-w-7xl px-6 lg:px-8">
         <div class="text-center mb-16">
