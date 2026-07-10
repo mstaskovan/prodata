@@ -3,180 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>eKasa Riešenia | Prodata plus s.r.o.</title>
-    <!-- Tailwind CSS -->
+    <title>eKasa Riešenia | PRODATA</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+<body class="bg-gray-50 font-sans text-gray-900 antialiased">
 
-    <!-- NAVIGÁCIA (MENU) -->
-    <nav class="sticky top-0 z-50 bg-white border-b border-gray-200/80 backdrop-blur-md bg-white/95">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                <!-- Logo -->
-                <div class="flex-shrink-0 flex items-center">
-                    <a href="index.html" class="flex items-center">
-                        <img src="logo.png" alt="PRODATA logo" class="h-10 w-auto">
-                    </a>
-                </div>
+   <!-- NAVIGÁCIA (S opraveným logom, odkazmi a mobilným menu presne podľa predlohy) -->
+    <nav class="sticky top-0 z-50 w-full border-b border-gray-100 bg-white shadow-sm">
+        <div class="w-full flex h-20 items-center justify-between px-6 lg:px-12">
+            
+            <!-- Logo - smeruje na absolútnu URL, s opraveným logo.png -->
+            <div class="flex items-center">
+                <a href="https://mstaskovan.github.io/prodata" class="transition opacity-100 hover:opacity-80">
+                    <img class="h-10 w-auto" src="img/logo.png" alt="PRODATA" style="max-height: 40px;">
+                </a>
+            </div>
+            
+            <!-- Desktop menu (Riešenia aktívne s font-bold a text-blue-600) -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="https://mstaskovan.github.io/prodata" class="text-sm font-semibold text-gray-600 hover:text-blue-600 transition">Domov</a>
+                <a href="https://mstaskovan.github.io/prodata#riesenia" class="text-sm font-bold text-blue-600 transition">Riešenia</a>
+                <a href="https://mstaskovan.github.io/prodata#podpora" class="text-sm font-semibold text-gray-600 hover:text-blue-600 transition">Podpora</a>
+                <a href="https://mstaskovan.github.io/prodata#contact" class="inline-flex items-center justify-center rounded-xl bg-blue-600 px-5 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-blue-700 transition">Kontakt</a>
+            </div>
 
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html" class="text-sm font-semibold text-gray-600 hover:text-blue-600 transition">Úvod</a>
-                    <a href="ponuka.html" class="text-sm font-semibold text-gray-600 hover:text-blue-600 transition">Ponuka</a>
-                    <a href="ekasa.html" class="text-sm font-semibold text-blue-600 border-b-2 border-blue-600 pb-1">eKasa</a>
-                    <a href="o-nas.html" class="text-sm font-semibold text-gray-600 hover:text-blue-600 transition">O nás</a>
-                    <a href="podpora.html" class="text-sm font-semibold text-gray-600 hover:text-blue-600 transition">Podpora</a>
-                    <a href="kontakt.html" class="text-sm font-semibold text-gray-600 hover:text-blue-600 transition">Kontakt</a>
-                </div>
-
-                <!-- Jazyky & CTA Tlačidlo -->
-                <div class="hidden md:flex items-center space-x-4">
-                    <span class="text-xs font-bold text-gray-400"><span class="text-blue-600 cursor-pointer">SK</span> | <span class="hover:text-gray-600 cursor-pointer">CZ</span></span>
-                    <a href="kontakt.html" class="rounded-xl bg-blue-600 px-5 py-2.5 text-xs font-bold text-white shadow-sm hover:bg-blue-700 transition uppercase tracking-wider">
-                        Nezáväzný dopyt
-                    </a>
-                </div>
-
-                <!-- Mobilné Menu Tlačidlo -->
-                <div class="md:hidden flex items-center">
-                    <button type="button" class="text-gray-600 hover:text-gray-900 focus:outline-none" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
-                        <i class="fas fa-bars text-xl"></i>
-                    </button>
-                </div>
+            <!-- Mobilné menu tlačidlo -->
+            <div class="flex md:hidden">
+                <button id="menu-btn-ps" class="inline-flex items-center justify-center rounded-lg p-2 text-gray-700 hover:bg-gray-100 transition focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
             </div>
         </div>
 
-        <!-- Rozbaľovacie Mobilné Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-200 px-4 pt-2 pb-4 space-y-2 shadow-lg">
-            <a href="index.html" class="block px-3 py-2 rounded-lg text-base font-semibold text-gray-600 hover:bg-gray-50">Úvod</a>
-            <a href="ponuka.html" class="block px-3 py-2 rounded-lg text-base font-semibold text-gray-600 hover:bg-gray-50">Ponuka</a>
-            <a href="ekasa.html" class="block px-3 py-2 rounded-lg text-base font-semibold text-blue-600 bg-blue-50/50">eKasa</a>
-            <a href="o-nas.html" class="block px-3 py-2 rounded-lg text-base font-semibold text-gray-600 hover:bg-gray-50">O nás</a>
-            <a href="podpora.html" class="block px-3 py-2 rounded-lg text-base font-semibold text-gray-600 hover:bg-gray-50">Podpora</a>
-            <a href="kontakt.html" class="block px-3 py-2 rounded-lg text-base font-semibold text-gray-600 hover:bg-gray-50">Kontakt</a>
+        <!-- Rozbaľovacie menu pre mobily -->
+        <div id="mobile-menu-ps" class="hidden border-b border-gray-100 bg-white px-6 py-4 space-y-2 md:hidden">
+            <a href="https://mstaskovan.github.io/prodata" class="block rounded-lg px-3 py-2 text-base font-semibold text-gray-700 hover:bg-gray-50">Domov</a>
+            <a href="https://mstaskovan.github.io/prodata#riesenia" class="block rounded-lg px-3 py-2 text-base font-semibold text-gray-700 hover:bg-gray-50">Riešenia</a>
+            <a href="https://mstaskovan.github.io/prodata#podpora" class="block rounded-lg px-3 py-2 text-base font-semibold text-gray-700 hover:bg-gray-50">Podpora</a>
+            <a href="https://mstaskovan.github.io/prodata#contact" class="block rounded-lg bg-blue-600 px-3 py-3 text-center text-base font-bold text-white shadow-sm hover:bg-blue-700">Kontakt</a>
         </div>
     </nav>
 
+    <!-- JS SKRIPT PRE MOBILNÉ MENU -->
+    <script>
+        const menuBtnPs = document.getElementById('menu-btn-ps');
+        const mobileMenuPs = document.getElementById('mobile-menu-ps');
+
+        menuBtnPs.addEventListener('click', () => {
+            mobileMenuPs.classList.toggle('hidden');
+        });
+
+        const menuLinksPs = mobileMenuPs.querySelectorAll('a');
+        menuLinksPs.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuPs.classList.add('hidden');
+            });
+        });
+    </script>
+
     <!-- HERO SEKCE -->
-    <header class="relative bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 py-20 text-white overflow-hidden">
-        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:16px_16px]"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="max-w-3xl">
-                <span class="inline-flex items-center gap-1.5 rounded-full bg-blue-500/10 px-3 py-1 text-xs font-medium text-blue-400 ring-1 ring-inset ring-blue-500/20 mb-4">
-                    Online registračné pokladnice (ORP)
-                </span>
-                <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight mb-6">
-                    Komplexné eKasa riešenia pre váš biznis
-                </h1>
-                <p class="text-lg text-slate-300 leading-relaxed max-w-2xl">
-                    Všetky naše systémy sú plne certifikované a pripravené na priame online prepojenie s portálom Finančnej správy SR. Zabezpečíme pre vás hardvér, softvér aj hladkú implementáciu.
-                </p>
-            </div>
-        </div>
-    </header>
-
-    <!-- INTRO & LEGISLATÍVA -->
-    <section class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <section class="w-full bg-gradient-to-br from-blue-900 to-indigo-950 text-white py-20 px-6 lg:px-12">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-                <h2 class="text-3xl font-bold text-gray-950 mb-6">Čo je projekt eKasa?</h2>
-                <div class="space-y-4 text-gray-600 leading-relaxed">
-                    <p>
-                        eKasa je projekt navrhnutý Finančnou správou SR (FS SR), v ktorom ide o povinné **online napojenie všetkých registračných pokladníc** na centrálny portál štátnej správy. Z klasických elektronických registračných pokladníc (ERP) sa tak stávajú online registračné pokladnice (ORP).
-                    </p>
-                    <p>
-                        Dáta o každej transakcii sú v reálnom čase automaticky odosielané cez internet a ukladané ako v centrálnom úložisku eKasa, tak aj v lokálnom chránenom dátovom úložisku (CHDÚ). Naša spoločnosť vám pomôže prejsť celým procesom bez akýchkoľvek administratívnych stresov.
-                    </p>
-                </div>
-            </div>
-            <div class="bg-white p-8 rounded-2xl border border-gray-200/60 shadow-sm">
-                <h3 class="text-lg font-bold text-gray-950 mb-4"><i class="fas fa-check-circle text-emerald-500 mr-2"></i>Kompatibilita systémov</h3>
-                <p class="text-sm text-gray-500 mb-6">Na legislatívny systém eKasa sú plne pripravené a optimalizované všetky nami dodávané produkty Asseco Solutions:</p>
-                <div class="grid grid-cols-2 gap-3">
-                    <div class="flex items-center space-x-2 p-3 bg-gray-50 rounded-xl border border-gray-100"><i class="fas fa-terminal text-blue-600 text-xs"></i> <span class="text-sm font-medium text-gray-700">Asseco SPIN</span></div>
-                    <div class="flex items-center space-x-2 p-3 bg-gray-50 rounded-xl border border-gray-100"><i class="fas fa-terminal text-blue-600 text-xs"></i> <span class="text-sm font-medium text-gray-700">Asseco QASIDA</span></div>
-                    <div class="flex items-center space-x-2 p-3 bg-gray-50 rounded-xl border border-gray-100"><i class="fas fa-terminal text-blue-600 text-xs"></i> <span class="text-sm font-medium text-gray-700">Asseco HELIOS</span></div>
-                    <div class="flex items-center space-x-2 p-3 bg-gray-50 rounded-xl border border-gray-100"><i class="fas fa-terminal text-blue-600 text-xs"></i> <span class="text-sm font-medium text-gray-700">Asseco BLUEGASTRO</span></div>
-                    <div class="flex items-center space-x-2 p-3 bg-gray-50 rounded-xl border border-gray-100"><i class="fas fa-terminal text-blue-600 text-xs"></i> <span class="text-sm font-medium text-gray-700">Asseco HOREC</span></div>
-                    <div class="flex items-center space-x-2 p-3 bg-gray-50 rounded-xl border border-gray-100"><i class="fas fa-terminal text-blue-600 text-xs"></i> <span class="text-sm font-medium text-gray-700">Retail Kasa</span></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- KROKY K PRIPOJENIU -->
-    <section class="py-16 bg-slate-900 text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Čo je potrebné k úspešnému pripojeniu?</h2>
-                <p class="mt-4 text-slate-400">Kompletný postup nasadenia eKasy krok za krokom, s ktorým vám kompletne pomôžeme.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Krok 1 -->
-                <div class="relative flex flex-col p-6 bg-slate-800/50 rounded-2xl border border-slate-700/50">
-                    <div class="w-12 h-12 bg-blue-600/10 text-blue-400 rounded-xl flex items-center justify-center font-bold text-lg mb-4 ring-1 ring-blue-500/20">1</div>
-                    <h4 class="text-base font-bold mb-2">Výber softvéru</h4>
-                    <p class="text-xs text-slate-400 leading-relaxed">Zvolíme vhodný pokladničný softvér z rodiny Asseco presne podľa individuálnych potrieb a charakteru vašej prevádzky.</p>
-                </div>
-                <!-- Krok 2 -->
-                <div class="relative flex flex-col p-6 bg-slate-800/50 rounded-2xl border border-slate-700/50">
-                    <div class="w-12 h-12 bg-blue-600/10 text-blue-400 rounded-xl flex items-center justify-center font-bold text-lg mb-4 ring-1 ring-blue-500/20">2</div>
-                    <h4 class="text-base font-bold mb-2">Výber hardvéru</h4>
-                    <p class="text-xs text-slate-400 leading-relaxed">Dodáme certifikované pokladničné zariadenia, fiškálne tlačiarne alebo all-in-one POS systémy s chráneným úložiskom.</p>
-                </div>
-                <!-- Krok 3 -->
-                <div class="relative flex flex-col p-6 bg-slate-800/50 rounded-2xl border border-slate-700/50">
-                    <div class="w-12 h-12 bg-blue-600/10 text-blue-400 rounded-xl flex items-center justify-center font-bold text-lg mb-4 ring-1 ring-blue-500/20">3</div>
-                    <h4 class="text-base font-bold mb-2">Žiadosť o kód (KP)</h4>
-                    <p class="text-xs text-slate-400 leading-relaxed">Prostredníctvom eKasa zóny na portáli Finančnej správy podáte žiadosť o pridelenie kódu online registračnej pokladnice.</p>
-                </div>
-                <!-- Krok 4 -->
-                <div class="relative flex flex-col p-6 bg-slate-800/50 rounded-2xl border border-slate-700/50">
-                    <div class="w-12 h-12 bg-emerald-600/10 text-emerald-400 rounded-xl flex items-center justify-center font-bold text-lg mb-4 ring-1 ring-emerald-500/20"><i class="fas fa-check"></i></div>
-                    <h4 class="text-base font-bold mb-2">Inicializácia & Servis</h4>
-                    <p class="text-xs text-slate-400 leading-relaxed">Nahráme do zariadenia inicializačný balíček, autentifikačné údaje, všetko otestujeme a zaškolíme váš personál.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- VÝMENA AUTENTIFIKAČNÝCH ÚDAJOV (UPOZORNENIE) -->
-    <section class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-100 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8">
-            <div class="max-w-2xl">
-                <div class="flex items-center gap-2 text-blue-700 font-bold text-sm mb-2">
-                    <i class="fas fa-exclamation-triangle"></i> Dôležité upozornenie pre prevádzkovateľov
-                </div>
-                <h3 class="text-xl md:text-2xl font-bold text-gray-950 mb-3">Končí platnosť vašich eKasa certifikátov?</h3>
-                <p class="text-sm text-gray-600 leading-relaxed">
-                    Platnosť autentifikačných údajov (AU), ktoré vydáva Finančná správa SR pre online pokladnice, je **obmedzená na 2 roky**. Pokladnica vás na blížiacu sa expiráciu upozorní 30 dní vopred. Odporúčame výmenu vykonať včas prostredníctvom našej servisnej organizácie, aby nedošlo k zablokovaniu komunikácie.
+                <span class="inline-flex items-center rounded-md bg-blue-500/10 px-3 py-1 text-sm font-medium text-blue-400 ring-1 ring-inset ring-blue-500/30 mb-4">Online registračné pokladnice</span>
+                <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl mb-6">
+                    eKasa riešenia
+                </h1>
+                <p class="text-lg text-blue-100 leading-8 mb-8">
+                    Komplexné zabezpečenie legislatívnych požiadaviek pre online napojenie pokladníc na Finančnú správu SR. Ponúkame certifikovaný hardvér, spoľahlivý softvér a hladkú integráciu.
                 </p>
+                <a href="#nezavazna-ponuka" class="rounded-xl bg-blue-600 px-6 py-3.5 text-sm font-bold text-white shadow-md hover:bg-blue-500 transition">Vyžiadať cenovú ponuku</a>
             </div>
-            <a href="kontakt.html" class="whitespace-nowrap rounded-xl bg-blue-600 px-6 py-3.5 text-xs font-bold text-white shadow-md hover:bg-blue-700 transition uppercase tracking-wider">
-                Objednať servis certifikátu
-            </a>
+            <div class="flex justify-center">
+                <!-- Ikona pre eKasu v dizajnovom obale -->
+                <div class="w-full max-w-sm flex flex-col items-center justify-center p-8 bg-white/5 rounded-3xl border border-white/10 backdrop-blur-sm text-center">
+                    <i class="fas fa-cash-register text-7xl text-blue-400 mb-4"></i>
+                    <span class="text-xl font-bold tracking-wider text-white">ORP & eKasa</span>
+                    <span class="text-xs text-blue-300 mt-1">Plne certifikované systémy</span>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left">
-            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-                <div>
-                    <p class="text-sm font-bold text-white">Prodata plus s.r.o.</p>
-                    <p class="text-xs mt-1">Autorizovaný partner Asseco Solutions | Všetky práva vyhradené &copy; 2026</p>
+    <!-- PREČO SI VYBRAŤ NAŠE EKASA RIEŠENIA -->
+    <section class="py-20 max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Čo je projekt eKasa?</h2>
+            <p class="mt-2 text-lg text-gray-600">Povinné online prepojenie pokladníc s centrálnym úložiskom Finančnej správy SR.</p>
+        </div>
+
+        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm">
+                <div class="h-12 w-12 rounded-xl bg-blue-50 flex items-center justify-center text-xl text-blue-600 mb-6">
+                    <i class="fas fa-cloud-upload-alt"></i>
                 </div>
-                <div class="flex space-x-6 text-xs font-semibold">
-                    <a href="index.html" class="hover:text-white transition">Úvod</a>
-                    <a href="ekasa.html" class="text-white">eKasa</a>
-                    <a href="kontakt.html" class="hover:text-white transition">Kontakt</a>
+                <h3 class="text-lg font-bold text-gray-900 mb-2">Online prenos dát</h3>
+                <p class="text-sm text-gray-600 leading-6">Informácie o každom predajnom doklade sú automaticky a v reálnom čase odosielané na portál Finančnej správy bez zdržania pri tlači.</p>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm">
+                <div class="h-12 w-12 rounded-xl bg-blue-50 flex items-center justify-center text-xl text-blue-600 mb-6">
+                    <i class="fas fa-hdd"></i>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900 mb-2">Chránené úložisko</h3>
+                <p class="text-sm text-gray-600 leading-6">Zariadenia obsahujú povinné Chránené dátové úložisko (CHDÚ), ktoré bezpečne ukladá kópie všetkých vydaných dokladov lokálne v pokladnici.</p>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm">
+                <div class="h-12 w-12 rounded-xl bg-blue-50 flex items-center justify-center text-xl text-blue-600 mb-6">
+                    <i class="fas fa-history"></i>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900 mb-2">Správa certifikátov</h3>
+                <p class="text-sm text-gray-600 leading-6">Sledujeme platnosť vašich autentifikačných balíčkov. Zabezpečíme včasnú výmenu expirovaných eKasa certifikátov (platnosť 2 roky).</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- LEGISLATÍVA A PODPORA PRODUKTOV ASSECO -->
+    <section class="py-20 bg-white border-t border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold tracking-tight text-gray-900 mb-6">Systémy plne pripravené na legislatívu</h2>
+                    <p class="text-gray-600 leading-7 mb-6">
+                        Všetky nami dodávané a podporované pokladničné aj podnikové systémy z dielne Asseco Solutions sú v úplnom súlade so zákonom č. 289/2008 Z. z. o používaní elektronickej registračnej pokladnice.
+                    </p>
+                    <ul class="space-y-4 text-sm text-gray-700">
+                        <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-3"></i> Priama integrácia na Asseco SPIN, QASIDA a HELIOS</li>
+                        <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-3"></i> Riešenia pre reštauračné systémy BLUEGASTRO a HOREC</li>
+                        <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-3"></i> Možnosť off-line predaja pri dočasnom výpadku internetu</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100">
+                    <h4 class="font-bold text-gray-950 mb-4"><i class="fas fa-info-circle text-blue-600 mr-2"></i> Čo zabezpečí PRODATA?</h4>
+                    <p class="text-sm text-gray-600 leading-6 mb-4">
+                        Prechod na eKasu alebo nasadenie nového riešenia zabezpečíme kompletne bez vašich starostí:
+                    </p>
+                    <div class="space-y-3 text-xs text-gray-600">
+                        <div class="p-3 bg-white rounded-lg border border-gray-200/60"><strong class="text-gray-900">1. Príprava a certifikácia:</strong> Pomôžeme s vygenerovaním identifikačných a autentifikačných údajov v eKasa zóne FS SR.</div>
+                        <div class="p-3 bg-white rounded-lg border border-gray-200/60"><strong class="text-gray-900">2. Inicializácia pokladnice:</strong> Zavedieme inicializačný balíček do CHDÚ, zaregistrujeme kód pokladnice a otestujeme spojenie.</div>
+                        <div class="p-3 bg-white rounded-lg border border-gray-200/60"><strong class="text-gray-900">3. Dlhodobá údržba:</strong> Vykonávame pravidelný servis a dohliadame na bezproblémové odosielanie dokladov.</div>
+                    </div>
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- AKCIA / CTA -->
+    <section id="nezavazna-ponuka" class="py-20 text-center max-w-4xl mx-auto px-6">
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">Potrebujete poradiť s výberom alebo aktualizáciou eKasy?</h3>
+        <p class="text-gray-600 mb-8">Kontaktujte nás. Naši technici vám navrhnú optimálne riešenie, preveria stav vašich certifikátov a vypracujú nezáväznú cenovú ponuku.</p>
+        <div class="flex justify-center space-x-4">
+            <a href="https://mstaskovan.github.io/prodata#contact" class="rounded-xl bg-blue-600 px-6 py-3.5 text-sm font-bold text-white shadow-md hover:bg-blue-700 transition">Kontaktovať nás</a>
+            <a href="https://mstaskovan.github.io/prodata#riesenia" class="rounded-xl border border-gray-300 bg-white px-6 py-3.5 text-sm font-bold text-gray-700 hover:bg-gray-50 transition">Späť na riešenia</a>
+        </div>
+    </section>
+
+    <!-- FOOTER (Presne podľa vašej predlohy) -->
+    <footer class="bg-gray-900 text-gray-400 py-8 text-center text-xs border-t border-gray-800">
+        <p>&copy; 2026 PRODATA plus, s.r.o. Všetky práva vyhradené.</p>
     </footer>
 
 </body>
